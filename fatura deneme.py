@@ -1,10 +1,12 @@
 print("Kırtasiyemize hoş geldininiz:)")
-print("TÜM ÜRÜNLERİ GİRDİKTEN SONRA TOPLAM ALIŞVERİŞ TUTARI İÇİN ÜRÜN İSMİ YERİNE 0 YAZINIZ.")
+print("\nTÜM ÜRÜNLERİ GİRDİKTEN SONRA TOPLAM ALIŞVERİŞ TUTARI İÇİN ÜRÜN İSMİ YERİNE 0 YAZINIZ.")
 ad=input("\nLütfen adınızı giriniz: ")
 toplamtutar=0
 liste=[]
+urunsırası=1
 while True:
     try:
+        print("\n", urunsırası,". ürün")
         urun=input("ürün ismi giriniz: ")
         if (urun=="0"):
             break
@@ -14,6 +16,7 @@ while True:
             tutar=adet*fiyat
             toplamtutar += tutar
             liste.append(urun)
+            urunsırası+=1
 
     except ValueError:
         print("lütfen geçerli bir sayı giriniz.")
